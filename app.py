@@ -1,5 +1,3 @@
-
-from ast import Try
 from flask import Flask, render_template, request, redirect, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import false
@@ -51,4 +49,4 @@ class Links(db.Model):
 
 
 if(__name__ == "__main__"):
-    app.run("0.0.0.0", 8080, debug=True)
+    app.run("0.0.0.0", 8080,debug=False)
