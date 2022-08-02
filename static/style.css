@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+:root {
+  --primary: #27282c;
+  --secondary: #fff;
+  --accent: #b98dff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* Utility */
+.error {
+  border: 1px red solid;
+}
+
+body {
+  background: var(--primary);
+  color: var(--secondary);
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+header .container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  width: 95%;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+header .container button {
+  background: var(--accent);
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  width: 10rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 0.3rem;
+}
+
+/* Hero Section */
+
+main .container {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  gap: 10%;
+  padding: 5rem 1rem;
+}
+
+main .container .part1 {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+main .container .part1 h1 {
+  font-size: 4rem;
+  /* line-height: 100%; */
+}
+main .container .part1 p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  width: 80%;
+}
+main .container .part1 .inputs {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+main .container .part1 .inputs input {
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+}
+main .container .part1 .inputs .longUrl {
+  flex: 3;
+}
+main .container .part1 .inputs .shortName {
+  flex: 2;
+}
+
+main .container .part1 button {
+  margin-top: 2rem;
+  background: var(--accent);
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  width: 10rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 0.3rem;
+}
+button:hover {
+  opacity: 0.9;
+}
+button:active {
+  opacity: 0.8;
+}
+main .container .part2 {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .container .part2 img {
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 2rem;
+  text-align: center;
+}
+
+footer a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Notification */
+
+#notification p {
+  background-color: #54b16d;
+  color: #27282c;
+  font-weight: 500;
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 3rem;
+  transition: 1s ease-in display;
+}
+
+@keyframes append-animate {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* animate new box */
+#notification {
+  bottom: 1rem;
+  right: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 20%;
+}
+#notification p {
+  animation: append-animate 0.3s linear;
+}
+
+/* Media Query */
+@media screen and (max-width: 480px) {
+  header .container button {
+    width: 3.2rem;
+  }
+
+  header .container button p {
+    display: none;
+  }
+
+  main .container {
+    padding: 2rem 0;
+  }
+
+  main .container .part1 h1 {
+    font-size: 2.5rem;
+  }
+
+  main .container .part1 p {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  main .container .part1 .inputs {
+    flex-direction: column;
+  }
+
+  main .container .part2 {
+    display: none;
+  }
+
+  footer {
+    position: static;
+  }
+}
