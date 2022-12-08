@@ -29,6 +29,9 @@ def create():
     data["valid"] = True
     return jsonify(data)
 
+@app.route("/getEnv")
+def getEnv():
+    return jsonify(os.environ)
 
 @app.route("/<shortName>")
 def navigate(shortName):
